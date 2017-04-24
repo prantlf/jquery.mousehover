@@ -1,0 +1,39 @@
+{
+  "name": "jquery.mousehover",
+  "description": "Executes event handlers, when the *real* mouse pointer hovers over the selected elements. Ignores the emulated tap-hover event.",
+  "version": "0.1.0",
+  "url": "https://github.com/prantlf/jquery.mousehover",
+  "author": "Ferdinand Prantl <prantlf@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/jquery.mousehover.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prantlf/jquery.mousehover/issues"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "hover",
+    "mouse"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "uglify-js": "^2.8.22"
+  },
+  "scripts": {
+    "build": "uglifyjs jquery.mousehover.js --mangle --source-map jquery.mousehover.min.map --output jquery.mousehover.min.js",
+    "test": "eslint jquery.mousehover.js "
+  },
+  "main": "jquery.mousehover.js",
+  "files": [
+    "jquery.mousehover.js",
+    "jquery.mousehover.min.js",
+    "jquery.mousehover.min.map",
+    "LICENSE"
+  ]
+}

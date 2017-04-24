@@ -1,0 +1,14 @@
+{
+  "name": "jquery.mousehover",
+  "main": "jquery.mousehover.js",
+  "dependencies": {
+    "jquery": ">=1.1.0"
+  },
+  "ignore": [
+    "example.html",
+    "*.md",
+    ".*",
+    "component.json",
+    "package.json"
+  ]
+}

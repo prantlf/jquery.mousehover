@@ -1,0 +1,12 @@
+.editorconfig
+.git
+.gitattributes
+.gitignore
+.idea
+.npmignore
+.travis.yml
+.vscode
+*.log
+bower_components
+example.html
+node_modules
