@@ -58,6 +58,18 @@ See the original documentation for [`jQuery.hover`] for more information.
 | handlerIn  | Function([Event] event) | A function to execute when the mouse pointer enters the selected element. |
 | handlerOut | Function([Event] event) | A function to execute when the mouse pointer leaves the selected element. |
 
+### Methods
+
+#### noConflict() : jQuery.mousehover
+
+Restores the earlier mousehover plugin, which had been registered in jQuery
+before this one. This plugin is returned for explicit usage.
+
+```javascript
+var mousehover = $.fn.mousehover.noConflict();
+mousehover.call($(selector), handlerIn, handlerOut);
+```
+
 ## Usage
 
 You have to ensure, that `jQuery` is included earlier, than

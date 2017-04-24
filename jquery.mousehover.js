@@ -17,7 +17,10 @@
 }(function ($) {
   'use strict';
 
-  var eventTimeProperty;
+  // Remember the existing mousehover plugin, if there is any, to be able
+  // to restore it by calling noConflict.
+  var oldMousehover = $.fn.mousehover,
+      eventTimeProperty;
 
   // If the browser supports pointer events, we can detect mouse reliably.
   if (window.onpointerenter) {
@@ -82,6 +85,13 @@
     // Default to jQuery.hover on devices with touch capability.
     $.fn.mousehover = $.fn.hover;
   }
+
+  // Restores the earlier mousehover plugin, which had been registered in
+  // jQuery before this one. This plugin is returned for explicit usage.
+  $.fn.mousehover.noConflict = function () {
+    $.fn.mousehover = oldMousehover;
+    return this;
+  };
 
   return $;
 }));
