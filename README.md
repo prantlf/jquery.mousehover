@@ -121,7 +121,7 @@ the list item:
 
 ## Installation
 
-Make sure that you have [NodeJS] >= 0.10 installed.  You can use either `npm`
+Make sure that you have [NodeJS] >= 4 installed.  You can use either `npm`
 or `bower` to install this package and its dependencies.
 
 With [NPM]:
@@ -138,7 +138,7 @@ bower install jquery.mousehover
 
 ## Build
 
-Make sure that you have [NodeJS] >= 0.10 installed.  Clone the Github
+Make sure that you have [NodeJS] >= 4 installed.  Clone the Github
 repository to a local directory, enter it and install the package
 dependencies (including the development dependencies) by `npm`:
 
