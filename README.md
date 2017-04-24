@@ -42,12 +42,14 @@ mouse event listening, without you coding the *real* mouse detection.
 ## Synopsis
 
 ```javascript
-$(selector).mousehover(handlerIn, handlerOut)
+$(selector).mousehover(handlerIn, handlerOut, options);
+$(selector).mousehover('off', options);
 ```
 
 Binds one or two handlers to the selected elements, which will be executed,
 when the *real* mouse pointer enters and leaves the elements. Ignores the
-emulated hover effect caused by tapping on a touch display.
+emulated hover effect caused by tapping on a touch display. It calls
+[`jQuery.on`] for selected events needed for the reliable operation.
 
 See the original documentation for [`jQuery.hover`] for more information.
 
@@ -57,6 +59,25 @@ See the original documentation for [`jQuery.hover`] for more information.
 | ---------- | ----------------------- | ------------------------------------------------------------------------- |
 | handlerIn  | Function([Event] event) | A function to execute when the mouse pointer enters the selected element. |
 | handlerOut | Function([Event] event) | A function to execute when the mouse pointer leaves the selected element. |
+| options    | [Object]                | An object with extra parameters for the plugin or its method execution.   |
+
+The parameter `handlerIn` has to be provided, if you are not unregistering the
+event handlers by passing the methof name `off` instead of it. The parameter
+`handlerOut` is optional; if not provided, the event handler `handlerIn` will
+be used instead of it. The `options` parameter is optional.
+
+Except for pasing the parameters as a list to the plugin function, you can
+pass them to it as an object literal too.
+
+```javascript
+$(selector).mousehover({
+  handlerIn: handlerIn,
+  handlerOut: handlerOut,
+  options: {
+    namespace: 'menu'
+  }
+});
+```
 
 ### Methods
 
@@ -67,7 +88,32 @@ before this one. This plugin is returned for explicit usage.
 
 ```javascript
 var mousehover = $.fn.mousehover.noConflict();
-mousehover.call($(selector), handlerIn, handlerOut);
+mousehover.call($(selector), handlerIn, handlerOut, options);
+```
+
+#### off : jQuery
+
+Unsubscribes event handlers registered by the previous call to `mousehover`.
+It calls [`jQuery.off`] for the events used during the registration time.
+
+```javascript
+$(selector).mousehover('off', options);
+```
+
+### Options
+
+#### namespace : string
+
+Registers event handlers for `mousehover` using the specified namespace. If
+other code registers `mouseenter`, `mouseleave`, `touchend`, `pointerenter`
+and `pointerleave` events, namespacing allows for selective unregistration
+of the particular event handlers. If you want to make sure, that you do not
+affect other plugins, you should use a unique namespace for `mousehover`.
+No namespace is used by default.
+
+```javascript
+$(selector).mousehover(handlerIn, handlerOut, {namespace: 'menu'});
+$(selector).mousehover('off', {namespace: 'menu'});
 ```
 
 ## Usage
@@ -133,7 +179,7 @@ the list item:
 
 ## Installation
 
-Make sure that you have [NodeJS] >= 4 installed.  You can use either `npm`
+Make sure that you have [NodeJS] >= 4 installed. You can use either `npm`
 or `bower` to install this package and its dependencies.
 
 With [NPM]:
@@ -150,7 +196,7 @@ bower install jquery.mousehover
 
 ## Build
 
-Make sure that you have [NodeJS] >= 4 installed.  Clone the Github
+Make sure that you have [NodeJS] >= 4 installed. Clone the Github
 repository to a local directory, enter it and install the package
 dependencies (including the development dependencies) by `npm`:
 
@@ -165,10 +211,10 @@ Examples and tests will be functional now.
 ## Contributing
 
 In lieu of a formal styleguide, take care to maintain the existing coding
-style.  Add unit tests for any new or changed functionality.
+style. Add unit tests for any new or changed functionality.
 
 First fork this repository and clone your fork locally instead of cloning
-the original.  See the "Build" chapter above for more details about how to
+the original. See the "Build" chapter above for more details about how to
 clone it and install the build dependencies.
 
 Before you commit, update minified files and source maps, re-generate
@@ -190,6 +236,8 @@ git push origin <branch name>
 
 ## Release History
 
+ * 2014-04-24   v0.2.0   Add noConflict method, off method for unregistering
+                         event handlers and optional event namespacing
  * 2014-04-24   v0.1.0   Initial release
 
 ## License
@@ -202,8 +250,11 @@ Licensed under the MIT license.
 [NodeJS]: http://nodejs.org/
 [NPM]: https://www.npmjs.com/
 [`jQuery.hover`]: https://api.jquery.com/hover/
+[`jQuery.off`]: http://api.jquery.com/off/
+[`jQuery.on`]: http://api.jquery.com/on/
 [Function]: http://api.jquery.com/Types/#Function
 [Event]: http://api.jquery.com/Types/#Event
+[Object]: http://api.jquery.com/Types/#Object
 [RequireJS]: https://github.com/amdjs/amdjs-api/blob/master/AMD.md
 [AMD]: https://github.com/amdjs/amdjs-api/blob/master/AMD.md
 [CommonJS]: http://wiki.commonjs.org/wiki/CommonJS
