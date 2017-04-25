@@ -236,7 +236,7 @@ git push origin <branch name>
 
 ## Release History
 
- * 2014-04-24   v0.2.0   Add noConflict method, off method for unregistering
+ * 2014-04-25   v0.2.0   Add noConflict method, off method for unregistering
                          event handlers and optional event namespacing
  * 2014-04-24   v0.1.0   Initial release
 

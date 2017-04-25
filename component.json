@@ -1,6 +1,6 @@
 {
   "name"          : "jquery.mousehover",
-  "version"       : "0.1.0",
+  "version"       : "0.2.0",
   "description"   : "Executes event handlers, when the *real* mouse pointer hovers over the selected elements. Ignores the emulated tap-hover event.",
   "keywords"      : ["jquery", "plugin", "hover", "mouse"],
   "repo"          : "prantlf/jquery.mousehover",
