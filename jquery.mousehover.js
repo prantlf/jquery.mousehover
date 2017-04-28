@@ -1,5 +1,5 @@
 /*
- * jquery.mousehover
+ * jquery.mousehover 0.2.1
  * https://github.com/prantlf/jquery.mousehover
  *
  * Copyright (c) 2017 Ferdinand Prantl
@@ -83,12 +83,12 @@
       }
       handlerOut = parameters.handlerOut;
       return this.on('pointerenter' + namespace, function (event) {
-                   if (event.pointerType === 'mouse') {
+                   if (event.originalEvent.pointerType === 'mouse') {
                      handlerIn.call(this, event);
                    }
                  })
                  .on('pointerleave' + namespace, function (event) {
-                   if (event.pointerType === 'mouse') {
+                   if (event.originalEvent.pointerType === 'mouse') {
                      handlerOut.call(this, event);
                    }
                  });
@@ -113,7 +113,7 @@
       // Store the time of the event, which would shortly preceed the
       // mouseenter event on touch-capable devices, if it were an emulated
       // mouse event caused by tapping the display.
-      return this.on('touchend' + namespace, function() {
+      return this.on('touchend' + namespace, function () {
                    $(this).data(eventTimeProperty, new Date().getTime());
                  })
                  // If the first event handler remembered its time and the
