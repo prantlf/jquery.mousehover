@@ -70,7 +70,7 @@
   }
 
   // If the browser supports pointer events, we can detect mouse reliably.
-  if (window.onpointerenter) {
+  if ('onpointerenter' in window) {
     $.fn.mousehover = function (handlerIn, handlerOut, options) {
       var parameters = normalizeParameters(handlerIn, handlerOut, options),
           namespace = parameters.namespace;
@@ -96,7 +96,7 @@
 
   // If the browser has support for touch events, the mouseenter and
   // mouseleave events can be emulated on tapping the display.
-  } else if (window.ontouchstart) {
+  } else if ('ontouchstart' in window) {
     eventTimeProperty = 'mousehover-start';
     $.fn.mousehover = function (handlerIn, handlerOut, options) {
       var parameters = normalizeParameters(handlerIn, handlerOut, options),
