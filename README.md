@@ -10,6 +10,8 @@ event handlers.
 * [Motivation](#motivation)
 * [Synopsis](#synopsis)
   + [Parameters](#parameters)
+  + [Methods](#methods)
+  + [Options](#options)
 * [Usage](#usage)
 * [Example](#example)
 * [Installation](#installation)
@@ -125,7 +127,9 @@ You have to ensure, that `jQuery` is included earlier, than
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-<script src="jquery.mousehover.js"></script>
+<script src="jquery.mousehover.min.js"
+        integrity="sha384-SQjNFjqu6aB5MdZehH5H2s+HipiAfjmg6BCwBESCcxoACk1XN8j8UAzbrGL8M64J"
+        crossorigin="anonymous"></script>
 ```
 
 If you use [RequireJS] or other [AMD] module loader, you have to ensure, that
