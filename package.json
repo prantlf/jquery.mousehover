@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "uglify-js": "^2.8.22"
+    "uglify-js": "^3.0.0"
   },
   "scripts": {
     "build": "uglifyjs jquery.mousehover.js --mangle --source-map jquery.mousehover.min.map --output jquery.mousehover.min.js",
