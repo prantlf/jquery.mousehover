@@ -26,7 +26,7 @@
     "uglify-js": "^3.0.0"
   },
   "scripts": {
-    "build": "uglifyjs jquery.mousehover.js --mangle --source-map jquery.mousehover.min.map --output jquery.mousehover.min.js",
+    "build": "uglifyjs jquery.mousehover.js --mangle --source-map --output jquery.mousehover.min.js",
     "test": "eslint jquery.mousehover.js "
   },
   "main": "jquery.mousehover.js",
