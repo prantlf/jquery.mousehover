@@ -6,13 +6,13 @@ notifications:
   email: false
 language: node_js
 node_js:
-    - "4"
-    - "6"
-    - "8"
+  - "4"
+  - "6"
+  - "8"
 before_install:
-    - npm install -g npm
+  - npm install -g npm
 before_script:
-    - npm install -g grunt-cli
+  - npm install -g grunt-cli
   - npm prune
 after_success:
   - npm run semantic-release
