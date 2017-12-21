@@ -22,14 +22,14 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^4.1.0",
-    "uglify-js": "^3.0.0",
-    "semantic-release": "^8.0.0"
+    "eslint": "^4.13.1",
+    "uglify-js": "^3.2.2",
+    "semantic-release": "^11.0.2"
   },
   "scripts": {
     "build": "uglifyjs jquery.mousehover.js --mangle --source-map --output jquery.mousehover.min.js",
     "test": "eslint jquery.mousehover.js ",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "main": "jquery.mousehover.js",
   "files": [
