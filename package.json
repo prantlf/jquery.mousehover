@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "uglify-js": "^3.2.2",
-    "semantic-release": "^11.0.2"
+    "semantic-release": "^12.2.2"
   },
   "scripts": {
     "build": "uglifyjs jquery.mousehover.js --mangle --source-map --output jquery.mousehover.min.js",
