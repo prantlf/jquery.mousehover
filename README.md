@@ -183,7 +183,7 @@ the list item:
 
 ## Installation
 
-Make sure that you have [NodeJS] >= 4 installed. You can use either `npm`
+Make sure that you have [NodeJS] >= 6 installed. You can use either `npm`
 or `bower` to install this package and its dependencies.
 
 With [NPM]:
@@ -200,7 +200,7 @@ bower install jquery.mousehover
 
 ## Build
 
-Make sure that you have [NodeJS] >= 4 installed. Clone the Github
+Make sure that you have [NodeJS] >= 6 installed. Clone the Github
 repository to a local directory, enter it and install the package
 dependencies (including the development dependencies) by `npm`:
 
@@ -240,6 +240,7 @@ git push origin <branch name>
 
 ## Release History
 
+ * 2018-04-27   v1.0.0   Dropped support of Node.js 4
  * 2014-04-28   v0.2.1   Fix detection of pointer and touch events 
                          in the browser, fix detection of mouse event type
  * 2014-04-25   v0.2.0   Add noConflict method, off method for unregistering
@@ -248,7 +249,7 @@ git push origin <branch name>
 
 ## License
 
-Copyright (c) 2017 Ferdinand Prantl
+Copyright (c) 2017-2018 Ferdinand Prantl
 
 Licensed under the MIT license.
 
