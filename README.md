@@ -1,4 +1,12 @@
-# jquery.mousehover [![NPM version](https://badge.fury.io/js/jquery.mousehover.png)](http://badge.fury.io/js/jquery.mousehover) ![Bower version](https://img.shields.io/bower/v/jquery.mousehover.svg) [![Size](http://img.badgesize.io/prantlf/jquery.mousehover/master/jquery.mousehover.min.js?compression=gzip&color=blue)](https://raw2.github.com/prantlf/jquery.mousehover/master/jquery.mousehover.min.js) [![Build Status](https://travis-ci.org/prantlf/jquery.mousehover.png)](https://travis-ci.org/prantlf/jquery.mousehover) [![Dependency Status](https://david-dm.org/prantlf/jquery.mousehover.svg)](https://david-dm.org/prantlf/jquery.mousehover) [![devDependency Status](https://david-dm.org/prantlf/jquery.mousehover/dev-status.svg)](https://david-dm.org/prantlf/jquery.mousehover#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/prantlf/jquery.mousehover.svg)](https://greenkeeper.io/) [![Code Climate](https://codeclimate.com/github/prantlf/jquery.mousehover/badges/gpa.svg)](https://codeclimate.com/github/prantlf/jquery.mousehover) [![Codacy Badge](https://www.codacy.com/project/badge/f3896e8dfa5342b8add12d50390edfcd)](https://www.codacy.com/public/prantlf/jquery.mousehover)
+# jquery.mousehover
+[![NPM version](https://badge.fury.io/js/jquery.mousehover.png)](http://badge.fury.io/js/jquery.mousehover)
+![Bower version](https://img.shields.io/bower/v/jquery.mousehover.svg)
+[![Size](http://img.badgesize.io/prantlf/jquery.mousehover/master/jquery.mousehover.min.js?compression=gzip&color=blue)](https://raw2.github.com/prantlf/jquery.mousehover/master/jquery.mousehover.min.js)
+[![Build Status](https://travis-ci.org/prantlf/jquery.mousehover.png)](https://travis-ci.org/prantlf/jquery.mousehover)
+[![Dependency Status](https://david-dm.org/prantlf/jquery.mousehover.svg)](https://david-dm.org/prantlf/jquery.mousehover)
+[![devDependency Status](https://david-dm.org/prantlf/jquery.mousehover/dev-status.svg)](https://david-dm.org/prantlf/jquery.mousehover#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/prantlf/jquery.mousehover/badges/gpa.svg)](https://codeclimate.com/github/prantlf/jquery.mousehover)
+[![Codacy Badge](https://www.codacy.com/project/badge/f3896e8dfa5342b8add12d50390edfcd)](https://www.codacy.com/public/prantlf/jquery.mousehover)
 
 [![NPM Downloads](https://nodei.co/npm/jquery.mousehover.png?downloads=true&stars=true)](https://www.npmjs.com/package/jquery.mousehover)
 
