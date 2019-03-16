@@ -257,7 +257,7 @@ git push origin <branch name>
 
 ## License
 
-Copyright (c) 2017-2018 Ferdinand Prantl
+Copyright (c) 2017-2019 Ferdinand Prantl
 
 Licensed under the MIT license.
 
