@@ -1,17 +1,10 @@
-sudo: false
-cache:
-  directories:
-    - ~/.npm
 notifications:
   email: false
 language: node_js
 node_js:
-  - "12"
-  - "10"
-  - "8"
-  - "6"
-before_script:
-  - npm install -g grunt-cli
+  - node
+  - lts/*
+  - 8
 after_success:
   - npx semantic-release
 branches:

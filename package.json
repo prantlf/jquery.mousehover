@@ -22,7 +22,7 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.4.0",
     "uglify-js": "^3.6.0"
   },
   "engines": {
